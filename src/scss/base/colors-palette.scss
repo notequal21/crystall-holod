@@ -1,0 +1,30 @@
+// ===============
+// colors palette
+// ===============
+
+$colors: (
+  'whte': #fff,
+  'blck': #000,
+  'bg-light': #f2f4f7,
+  'text-primary': #1a1b21,
+  'text-secondary': #5e6175,
+  'main-accent': #448aff,
+  'main-primary': #3f51b5,
+  'main-dark-primary': #303f9f,
+  'additional-divider': #dcdee5,
+  'additional-red': #f04141,
+  'additional-green': #29cc29,
+);
+
+//========================================================================================================================================================
+
+:root {
+  @if $colors {
+    @each $key, $value in $colors {
+      --color-#{$key}: #{$value};
+      --color-#{$key}--rgb: #{hextorgb($value)};
+    }
+  }
+
+  --font-primary: #{$fontFamily};
+}

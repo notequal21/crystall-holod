@@ -1,0 +1,80 @@
+.hits {
+  padding: rem(60) 0;
+
+  @media (max-width: $mobile) {
+    padding: rem(40) 0;
+  }
+
+  &-body {
+    border-radius: rem(32);
+    background-color: cl(whte);
+    padding: rem(20);
+    overflow: hidden;
+
+    @media (max-width: $mobile) {
+      margin: 0 rem(-16);
+      padding: rem(24) rem(16);
+      border-radius: rem(24);
+    }
+  }
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 rem(20);
+
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+
+    &__title {
+    }
+    &__all {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &-slider {
+    margin: rem(16) 0 0;
+
+    @media (max-width: $mobile) {
+      margin: rem(20) 0 0;
+    }
+
+    .swiper-slide {
+      @media (max-width: $tablet) {
+        width: rem(250) !important;
+      }
+    }
+  }
+
+  &-bottom {
+    position: relative;
+    margin: rem(20) 0 0;
+    padding: rem(20) 0 0;
+
+    display: none;
+
+    @media (max-width: $tablet) {
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      background-color: cl(additional-divider);
+      left: rem(12);
+      right: rem(12);
+      height: rem(1);
+    }
+
+    &__all {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

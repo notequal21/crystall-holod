@@ -1,0 +1,101 @@
+.stock {
+  margin: rem(20) 0 0;
+
+  &__container {
+  }
+  &-body {
+    display: flex;
+    padding: rem(16) 0 rem(16) rem(32);
+    background-color: cl(whte);
+    border-radius: rem(32);
+    gap: rem(24);
+
+    @media (max-width: $mobile) {
+      border-radius: rem(24);
+      margin: 0 rem(-16);
+      padding: rem(24) rem(16);
+      flex-direction: column;
+      gap: rem(28);
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex: 0 0 rem(300);
+      padding: rem(14) 0;
+
+      @media (max-width: $mobile) {
+        flex: 0 0 auto;
+        padding: 0 rem(16);
+        gap: rem(24);
+      }
+
+      &-title {
+      }
+      &-btn {
+        @media (max-width: $mobile) {
+          width: 100%;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+    }
+    &__slider {
+      position: relative;
+      width: calc(100% - rem(324));
+
+      @media (max-width: $mobile) {
+        width: calc(100% + rem(16));
+      }
+
+      &-nav {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        @media (max-width: $mobile) {
+          display: none;
+        }
+
+        &._prev {
+          left: rem(-14);
+        }
+        &._next {
+          right: rem(-14);
+        }
+      }
+      &-item {
+        padding: rem(8);
+        border-radius: rem(20) 0 0 rem(20);
+        background-color: cl(bg-light);
+        overflow: hidden;
+        width: calc(100%);
+
+        .swiper-slide {
+          position: relative;
+          width: rem(212);
+          height: rem(200);
+          overflow: hidden;
+          border-radius: rem(16);
+
+          p {
+            position: absolute;
+            z-index: 1;
+            top: rem(16);
+            left: rem(16);
+          }
+
+          img {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            user-select: none;
+          }
+        }
+      }
+    }
+  }
+}
