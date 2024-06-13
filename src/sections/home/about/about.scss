@@ -35,6 +35,10 @@
         align-self: flex-start;
         margin: rem(24) 0 0;
         padding: rem(12) rem(24);
+
+        &:hover {
+          background-color: cl(main-primary);
+        }
       }
       &-list {
         display: flex;

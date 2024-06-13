@@ -1,0 +1,107 @@
+.offer {
+  display: flex;
+  align-items: flex-start;
+  gap: rem(24);
+  @media (max-width: $laptop) {
+    gap: rem(20);
+  }
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  &-col {
+    flex: 1 1 50%;
+    border: rem(1) solid cl(additional-divider);
+    border-radius: rem(16);
+    padding: rem(16);
+
+    @media (max-width: $laptop) {
+      flex: 1 2 50%;
+    }
+    @media (max-width: $tablet) {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+
+    &.offer-col_delivery {
+      padding: rem(16) rem(8) 0 rem(16);
+
+      @media (max-width: $laptop) {
+        flex: 1 1 50%;
+      }
+      @media (max-width: $tablet) {
+        flex: 1 1 auto;
+      }
+    }
+  }
+  .cart-summary {
+    flex: 0 0 rem(330);
+    @media (max-width: $laptop) {
+      flex: 0 0 rem(300);
+    }
+  }
+  &-delivery {
+    &__title {
+      padding: 0 rem(8) 0 0;
+    }
+    &__select {
+      display: flex;
+      flex-direction: column;
+      gap: rem(4);
+      margin: rem(12) 0 0;
+    }
+    &__list {
+      margin: rem(16) 0 0;
+      padding: 0 0 rem(16);
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: rem(340);
+
+      &::-webkit-scrollbar {
+        width: rem(8);
+        background-color: trans-prefix;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-right: rem(2) solid cl(main-dark-primary);
+      }
+      &::-webkit-scrollbar-thumb:hover {
+      }
+      &::-webkit-scrollbar-button:vertical:start:decrement {
+        background-color: transparent;
+        height: rem(16);
+      }
+      &::-webkit-scrollbar-button:vertical:end:increment {
+        background-color: transparent;
+        height: rem(16);
+      }
+
+      ._delivery-item {
+      }
+    }
+  }
+
+  ._payment {
+    margin: rem(16) 0 0;
+    padding: rem(16) 0 0;
+    border-top: rem(1) solid cl(additional-divider);
+
+    &-item {
+      display: flex;
+      align-items: center;
+      color: cl(text-primary, 0.75);
+      padding: rem(12);
+
+      border: rem(1) solid cl(additional-divider);
+      border-radius: rem(8);
+
+      img {
+        height: rem(26);
+        object-fit: contain;
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+}

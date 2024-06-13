@@ -1,5 +1,15 @@
+@import 'nouislider/dist/nouislider.css';
+
+@import '../../node_modules/choices.js/src/styles/choices.scss';
+
 @import '../components/header/header';
 
 @import '../components/footer/footer';
 
 @import '../sections/index.scss';
+
+@import '../components/rangeSlider/rangeSlider';
+
+@import '../components/selects/selects';
+
+@import "../components/fancyGallery/fancyGallery";

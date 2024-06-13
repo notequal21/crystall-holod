@@ -3,7 +3,13 @@
 */
 
 import Swiper from 'swiper';
-import { A11y, Navigation, Pagination } from 'swiper/modules';
+import {
+  A11y,
+  Navigation,
+  Pagination,
+  Thumbs,
+  Mousewheel,
+} from 'swiper/modules';
 /*
 Navigation, Pagination, Autoplay, 
 EffectFade, Lazy, Manipulation
@@ -34,7 +40,7 @@ export const createSlider = (el, options) => {
 
 const sliders = [];
 // Инициализация слайдеров
-function initSliders() {
+export function initSliders() {
   // Список слайдеров
   // Проверяем, есть ли слайдер на странице
   console.log(sliders);
@@ -44,6 +50,151 @@ function initSliders() {
 }
 
 window.addEventListener('load', function (e) {
+  const catalogItemSliderMin = new Swiper('.detail-main__slider-thumb', {
+    modules: [Pagination, Thumbs, Mousewheel],
+    slidesPerView: 4,
+    watchSlidesProgress: true,
+    spaceBetween: 19,
+    direction: 'horizontal',
+    mousewheel: true,
+    breakpoints: {
+      767: {
+        spaceBetween: 24,
+      },
+      1441: {
+        spaceBetween: 24,
+        direction: 'vertical',
+      },
+    },
+  });
+  const catalogItemSliderMain = new Swiper('.detail-main__slider-big', {
+    modules: [Pagination, Thumbs, Navigation],
+    slidesPerView: 1,
+    thumbs: {
+      swiper: catalogItemSliderMin,
+    },
+    pagination: {
+      el: '._slider_pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '._slider_nav._prev',
+      nextEl: '._slider_nav._next',
+    },
+  });
+  // const catalogItemSliderMin = new Swiper('.detail-main__slider-thumb', {
+  //   modules: [Pagination, Thumbs, Mousewheel],
+  //   slidesPerView: 3,
+  //   watchSlidesProgress: true,
+  //   spaceBetween: 19,
+  //   direction: 'horizontal',
+  //   mousewheel: true,
+  //   breakpoints: {
+  //     767: {
+  //       spaceBetween: 24,
+  //     },
+  //     1441: {
+  //       spaceBetween: 24,
+  //       direction: 'vertical',
+  //     },
+  //   },
+  // });
+  // const catalogItemSliderMain = new Swiper('.detail-main__slider-big', {
+  //   modules: [Pagination, Thumbs, Navigation],
+  //   slidesPerView: 1,
+  //   thumbs: {
+  //     swiper: catalogItemSliderMin,
+  //   },
+  //   pagination: {
+  //     el: '._slider_pagination',
+  //     clickable: true,
+  //   },
+  //   navigation: {
+  //     prevEl: '._slider_nav._prev',
+  //     nextEl: '._slider_nav._next',
+  //   },
+  // });
+  // createSlider('.detail-main__slider-big', {
+  //   modules: [Pagination, Thumbs, Navigation],
+  //   slidesPerView: 1,
+  //   thumbs: {
+  //     swiper: catalogItemSliderMin,
+  //   },
+  //   pagination: {
+  //     el: '._slider_pagination',
+  //     clickable: true,
+  //   },
+  //   navigation: {
+  //     prevEl: '._slider_nav._prev',
+  //     nextEl: '._slider_nav._next',
+  //   },
+  // });
+  createSlider('._slider', {
+    modules: [Pagination, Navigation],
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
+    pagination: {
+      el: '._slider__pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '._slider__nav._prev',
+      nextEl: '._slider__nav._next',
+    },
+  });
+  createSlider('.fast_view-body__slider', {
+    modules: [Pagination, Navigation],
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
+    pagination: {
+      el: '._slider_pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '._slider_nav._prev',
+      nextEl: '._slider_nav._next',
+    },
+  });
+  createSlider('.fast_view-body__slider', {
+    modules: [Pagination, Navigation],
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
+    pagination: {
+      el: '._slider_pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '._slider_nav._prev',
+      nextEl: '._slider_nav._next',
+    },
+  });
+  const companySliderList = document.querySelectorAll('._company-slider');
+  companySliderList.forEach((item) => {
+    createSlider(item.querySelector('._company-slider__content'), {
+      modules: [Navigation],
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      navigation: {
+        prevEl: '._company-slider__nav._prev',
+        nextEl: '._company-slider__nav._next',
+      },
+    });
+  });
+  const examplesSliderList = document.querySelectorAll('._examples-slider');
+  examplesSliderList.forEach((item) => {
+    createSlider(item.querySelector('._examples-slider__item'), {
+      modules: [Navigation],
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      navigation: {
+        prevEl: '._examples-slider__nav._prev',
+        nextEl: '._examples-slider__nav._next',
+      },
+    });
+  });
   createSlider('.stock-body__slider-item', {
     modules: [Navigation],
     slidesPerView: 'auto',

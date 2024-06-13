@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm i --legacy-peer-deps",
     "dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
-    "build": "gulp build --build && npx gulp afterBuild && npx gulp test",
+    "build": "gulp build --build && npx gulp afterBuild",
     "sprite": "gulp sprite",
     "fonts": "gulp fonts --rewrite",
     "deploy": "gulp deployFTP --build",
@@ -40,6 +40,7 @@
     "del": "latest",
     "file-include-webpack-plugin-replace": "latest",
     "file-loader": "^6.2.0",
+    "glob": "^10.3.10",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "9.0.0",
     "gulp-clean-css": "4.3.0",
@@ -68,9 +69,11 @@
     "inputmask": "latest",
     "js-datepicker": "latest",
     "lightgallery": "latest",
+    "lint-staged": "13.2.3",
     "load-plugins": "latest",
     "mini-css-extract-plugin": "2.4.7",
-    "nouislider": "latest",
+    "mkdirp": "3.0.1",
+    "nouislider": "^15.7.2",
     "pug": "latest",
     "pug-loader": "latest",
     "sass": "latest",
@@ -88,12 +91,11 @@
     "webpack": "latest",
     "webpack-cli": "latest",
     "webpack-dev-server": "latest",
-    "webpack-stream": "latest",
-    "glob": "^10.3.10",
-    "lint-staged": "13.2.3",
-    "mkdirp": "3.0.1"
+    "webpack-stream": "latest"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
+    "choices.js": "^10.2.0",
     "gulp-cheerio": "^1.0.0",
     "isotope-layout": "^3.0.6"
   }

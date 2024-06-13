@@ -1,0 +1,282 @@
+.lk_orders {
+  margin: rem(40) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+
+  @media (max-width: $mobile) {
+    margin: rem(24) 0 0;
+  }
+
+  &-item {
+    background-color: cl(bg-light);
+    border-radius: rem(16);
+    padding: rem(16);
+
+    transition: all $time $tr;
+
+    @media (max-width: $mobile) {
+      padding: rem(16) rem(16);
+    }
+
+    &._open {
+      .lk_orders-item__top-arrow {
+        transform: scale(1, -1);
+      }
+      .lk_orders-item__content {
+        margin: rem(24) 0 0;
+      }
+      .lk_orders-item__btn {
+        svg {
+          transform: scale(1, -1) translate(0, 50%);
+        }
+        span {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      position: relative;
+      margin: rem(12) 0 0;
+      padding: rem(6) rem(6);
+      border-color: cl(additional-divider);
+      color: cl(text-secondary);
+      font-size: rem(12);
+
+      display: none;
+
+      @media (max-width: $mobile) {
+        display: flex;
+      }
+
+      span {
+        &:nth-child(1) {
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: rem(8);
+        transition: all $time $tr;
+
+        path {
+          fill: cl(main-dark-primary);
+        }
+      }
+    }
+
+    &__top {
+      cursor: pointer;
+      display: flex;
+      gap: rem(8);
+      align-items: center;
+
+      @media (max-width: $mobile) {
+        flex-wrap: wrap;
+        gap: rem(16);
+      }
+
+      &-arrow {
+        flex: 0 0 auto;
+        width: rem(24);
+        height: rem(24);
+        transition: all $time $tr;
+
+        @media (max-width: $mobile) {
+          display: none;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      &-name {
+        @media (max-width: $mobile) {
+          width: 100%;
+          font-size: rem(14);
+        }
+      }
+      &-date {
+        color: cl(text-primary, 0.5);
+        @media (max-width: $mobile) {
+          width: 100%;
+          font-size: rem(12);
+          margin: rem(-16) 0 0;
+        }
+      }
+      &-count {
+        margin: 0 0 0 auto;
+        @media (max-width: $mobile) {
+          font-size: rem(14);
+          margin: 0;
+        }
+      }
+      &-sum {
+        margin: 0 rem(8);
+        @media (max-width: $mobile) {
+          margin: 0;
+          font-size: rem(14);
+        }
+      }
+      &-link {
+        @media (max-width: $mobile) {
+          width: 100%;
+          font-size: rem(12);
+          svg {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+      margin: 0;
+      height: 0;
+      overflow: hidden;
+
+      transition: all $time $tr;
+
+      @media (max-width: $mobile) {
+        gap: rem(50);
+      }
+    }
+  }
+
+  &-card {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+
+    @media (max-width: $mobile) {
+      &:last-child {
+        margin: 0 0 rem(12);
+      }
+      &:not(:first-child) {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: rem(-24);
+          left: rem(12);
+          right: rem(12);
+          height: rem(1);
+          background-color: cl(additional-divider);
+        }
+      }
+    }
+
+    &:hover {
+      .lk_orders-card__img {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &__img {
+      flex: 0 0 auto;
+      border: rem(1) solid cl(bg-light);
+      border-radius: rem(16);
+      background-color: cl(bg-white);
+      overflow: hidden;
+      align-self: flex-start;
+
+      width: rem(100);
+      height: rem(100);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: all $time $tr;
+      }
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+        gap: rem(8);
+      }
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: flex-start;
+      gap: rem(16);
+      margin: 0 auto 0 0;
+
+      @media (max-width: $mobile) {
+        margin: 0 0 rem(8);
+        gap: rem(8);
+
+        .text {
+          font-size: rem(12);
+        }
+      }
+
+      .catalog_item-content__art {
+        margin: 0;
+
+        @media (max-width: $mobile) {
+          font-size: 0;
+          padding: 0;
+          line-height: 1.33;
+          background-color: transparent;
+          span {
+            font-size: rem(12);
+            color: cl(text-secondary);
+            display: block;
+          }
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+    &__row {
+      padding: 0 rem(8);
+      white-space: nowrap;
+
+      @media (max-width: $mobile) {
+        width: 100%;
+        display: flex;
+        gap: rem(16);
+        justify-content: space-between;
+        padding: 0;
+        white-space: unset;
+        font-size: rem(12);
+      }
+
+      span {
+        &:nth-child(1) {
+          display: none;
+
+          @media (max-width: $mobile) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
