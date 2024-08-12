@@ -1,0 +1,46 @@
+.catalog-notfound {
+  padding: rem(34) 0 rem(94);
+
+  @media (max-width: $mobile) {
+    padding: rem(80) 0 rem(140);
+  }
+
+  &__icon {
+    margin: 0 auto;
+    width: rem(128);
+    height: rem(128);
+
+    @media (max-width: $mobile) {
+      width: rem(80);
+      height: rem(80);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__title {
+    margin: rem(40) 0 0;
+    text-align: center;
+
+    br {
+      display: none;
+      @media (max-width: $mobile) {
+        display: block;
+      }
+    }
+  }
+  &__text {
+    margin: rem(16) 0 0;
+    text-align: center;
+
+    br {
+      display: none;
+      @media (max-width: $mobile) {
+        display: block;
+      }
+    }
+  }
+}

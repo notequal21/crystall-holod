@@ -1,4 +1,3 @@
-
 import '../components/slider/slider.js';
 import '../components/headerCategory/headerCategory.js';
 import '../components/catalogAccord/catalogAccord.js';
@@ -13,3 +12,8 @@ import '../components/codeInner/codeInner.js';
 import '../components/showPass/showPass.js';
 import '../components/copy/copy.js';
 import '../components/fancyGallery/fancyGallery.js';
+import '../components/headerSticky/headerSticky.js';
+
+import '../components/upBtn/upBtn.js';
+import '../components/headerSearch/headerSearch.js';
+import '../components/preloader/preloader.js';

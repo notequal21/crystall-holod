@@ -20,6 +20,13 @@
     background-color: cl(bg-white);
   }
 
+  &._small-space {
+    margin: rem(24) 0 0;
+    @media (max-width: $mobile) {
+      margin: rem(16) 0 0;
+    }
+  }
+
   &__container {
   }
   &-body {

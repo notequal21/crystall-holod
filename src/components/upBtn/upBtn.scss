@@ -1,0 +1,25 @@
+.upBtn {
+  position: fixed;
+  z-index: 9;
+  bottom: rem(12);
+  right: rem(12);
+  border-radius: 50%;
+
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transform: translate(0, rem(12));
+
+  transition: all $time $tr;
+
+  @media (max-width: $mobile) {
+    bottom: rem(87);
+  }
+
+  &.visible {
+    transform: translate(0);
+    opacity: 1;
+    pointer-events: unset;
+    user-select: unset;
+  }
+}

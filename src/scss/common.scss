@@ -253,6 +253,14 @@
   @media (max-width: $mobile) {
     font-size: rem(20);
   }
+
+  &._32 {
+    font-size: rem(32);
+
+    @media (max-width: $mobile) {
+      font-size: rem(24);
+    }
+  }
 }
 .h3 {
   font-size: rem(24);

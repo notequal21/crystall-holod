@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{ "title":"HomePage" })
+
+<body>
+  <div class="wrapper">
+    @@include('components/header/header-back.html',{})
+    <main class="page">
+      @@include('sections/search/notfound-top.html',{})
+      @@include('sections/search/notfound.html',{})
+    </main>
+    @@include('components/footer/footer.html',{})
+    @@include('html/_popup.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
