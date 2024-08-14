@@ -1,0 +1,36 @@
+.catalog_null {
+  margin: rem(24) 0 rem(88);
+  @media (max-width: $mobile) {
+    margin: rem(16) 0 rem(60);
+  }
+
+  &-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(16) rem(24);
+
+    @media (max-width: $tablet) {
+      gap: rem(8);
+    }
+
+    .null_card {
+      flex: 0 0 calc(16.666% - rem(20));
+      width: auto;
+
+      @media (max-width: $pc) {
+        flex: 0 0 calc(25% - rem(18));
+      }
+      @media (max-width: $tablet) {
+        flex: 0 0 calc(33.333% - rem(5.333));
+      }
+      @media (max-width: $mobile) {
+        flex: 0 0 calc(50% - rem(4));
+        height: rem(174);
+
+        .h5 {
+          font-size: rem(14);
+        }
+      }
+    }
+  }
+}

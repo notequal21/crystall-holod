@@ -14,8 +14,14 @@
       opacity: 0;
       padding: 0;
     }
-    .header-body {
-      padding: rem(10) 0;
+    // .header-body {
+    //   padding: rem(10) 0;
+    // }
+    .header-warn {
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      padding: 0;
     }
 
     &._visible {
@@ -23,6 +29,33 @@
       box-shadow: 0 0 rem(16) 0 rgba(48, 63, 159, 0.3);
     }
   }
+
+  &-warn {
+    padding: rem(10) 0;
+    background-color: cl(main-accent);
+    transition: all $time $tr;
+
+    @media (max-width: $mobile) {
+      transform: translate(0, rem(-12));
+    }
+
+    &__container {
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+
+      &-icon {
+        flex: 0 0 auto;
+        width: rem(20);
+        height: rem(20);
+      }
+      &-text {
+      }
+    }
+  }
+
   &__container {
     position: relative;
 
@@ -256,6 +289,29 @@
       }
 
       &-item {
+        position: relative;
+
+        span {
+          position: absolute;
+          top: rem(2);
+          left: calc(50% + rem(10));
+          transform: translate(-50%, 0);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: rem(16);
+          height: rem(16);
+          background-color: cl(additional-red);
+          border: rem(1) solid #fff;
+          border-radius: 50%;
+
+          font-weight: 500;
+          font-size: rem(10);
+          line-height: 110%;
+          text-align: center;
+          color: #fff;
+        }
       }
     }
 
@@ -311,6 +367,30 @@
             display: none;
           }
         }
+      }
+
+      position: relative;
+
+      span {
+        position: absolute;
+        top: rem(-4);
+        left: calc(50% + rem(8));
+        transform: translate(-50%, 0);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(14);
+        height: rem(14);
+        background-color: cl(additional-red);
+        border: rem(1) solid #fff;
+        border-radius: 50%;
+
+        font-weight: 500;
+        font-size: rem(8);
+        line-height: 110%;
+        text-align: center;
+        color: #fff;
       }
 
       svg {

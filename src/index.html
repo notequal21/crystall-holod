@@ -6,6 +6,8 @@
   <div class="wrapper">
     @@include('components/header/header.html',{})
 
+    @@include('components/notification/notification.html',{})
+
     <main class="page">
       <section class="index-page">
         <div class="index-page__container">
@@ -86,6 +88,16 @@
               </a>
             </li>
             <li style="margin-bottom: 10px">
+              <a href="policy.html">
+                Политика конфиденциальности
+              </a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="catalog-null.html">
+                Нулевой уровень
+              </a>
+            </li>
+            <li style="margin-bottom: 10px">
               <a href="ui.html">Ui</a>
             </li>
           </ol>
@@ -127,6 +139,12 @@
             </li>
             <li style="margin-bottom: 10px">
               <a href="popup-success.html" data-popup="#success-modal">Спасибо за покупку!</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="popup-warn-price.html" data-popup="#warn-price-modal">Предупреждение №1 – Модальное окно</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="popup-subscribe.html" data-popup="#subscribe-modal">Подписаться</a>
             </li>
           </ol>
         </div>

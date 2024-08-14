@@ -333,6 +333,20 @@
   &_11 {
     font-size: rem(11);
   }
+
+  &.black_link {
+    a {
+      color: cl(text-primary);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &.center {
+    text-align: center;
+  }
 }
 
 ._discount {

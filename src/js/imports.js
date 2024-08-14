@@ -17,3 +17,5 @@ import '../components/headerSticky/headerSticky.js';
 import '../components/upBtn/upBtn.js';
 import '../components/headerSearch/headerSearch.js';
 import '../components/preloader/preloader.js';
+import '../components/policyAccordion/policyAccordion.js';
+import '../components/notification/notification.js';

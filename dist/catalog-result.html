@@ -11,26 +11,19 @@
 	<link rel="manifest" href="/site.webmanifest">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="./img/favicon/favicon.png">
-	<link rel="apple-touch-icon" sizes="57x57" href="./img/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="./img/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="./img/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="./img/apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="./img/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="./img/apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="./img/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="./img/apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon-180x180.png">
-	<link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="./android-chrome-192x192.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon./img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./img/favicon/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
 	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#C2AB81">
 	<meta name="msapplication-TileColor" content="#272727">
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#C2AB81">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240812205226">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240814183301">
 	<script>
 		var baseUrl = "./js/";
 	</script>
@@ -39,6 +32,28 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
+			<div class="header-warn">
+				<div class="header-warn__container">
+					<div class="header-warn__content">
+						<div class="header-warn__content-icon">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_71_571)">
+									<path d="M10.0003 1.66602C5.40033 1.66602 1.66699 5.39935 1.66699 9.99935C1.66699 14.5993 5.40033 18.3327 10.0003 18.3327C14.6003 18.3327 18.3337 14.5993 18.3337 9.99935C18.3337 5.39935 14.6003 1.66602 10.0003 1.66602ZM10.8337 14.166H9.16699V12.4993H10.8337V14.166ZM10.8337 10.8327H9.16699V5.83268H10.8337V10.8327Z" fill="white" />
+								</g>
+								<defs>
+									<clipPath id="clip0_71_571">
+										<rect width="20" height="20" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</div>
+						<div class="header-warn__content-text text text_14 text_white">
+							Уважаемый покупатель! На данный момент уровень Ваших цен на сайте - Розница. Для отображения оптовых цен
+							просим Вас обратиться к закрепленному за Вами менеджеру или написать нам письмо на <a href="mailto:c.kholod@mail.ru">c.kholod@mail.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="header-top">
 				<div class="header__container">
 					<nav class="header-top__links text text_12 text_secondary">
@@ -235,6 +250,7 @@
 								<path d="M7 18C5.9 18 5.01 18.9 5.01 20C5.01 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM17 18C15.9 18 15.01 18.9 15.01 20C15.01 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18ZM8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L22 4H7.5L8.39372 5.75H18.6732L15.55 11H8.53L4.27 2H1V4H3L6.6 11.59L5.25 14.03C4.52 15.37 5.48 17 7 17H19V15H7L8.1 13Z" fill="#448AFF" />
 							</svg>
 							Корзина
+							<span>0</span>
 						</button>
 						<button class="header-body__btns-item btn btn_transparrent btn_vertical">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -811,6 +827,7 @@
 					<path d="M6.33325 15C5.41658 15 4.67492 15.75 4.67492 16.6667C4.67492 17.5834 5.41658 18.3334 6.33325 18.3334C7.24992 18.3334 7.99992 17.5834 7.99992 16.6667C7.99992 15.75 7.24992 15 6.33325 15ZM14.6666 15C13.7499 15 13.0083 15.75 13.0083 16.6667C13.0083 17.5834 13.7499 18.3334 14.6666 18.3334C15.5833 18.3334 16.3333 17.5834 16.3333 16.6667C16.3333 15.75 15.5833 15 14.6666 15ZM7.24992 10.8334H13.4583C14.0833 10.8334 14.6333 10.4917 14.9166 9.97502L18.8333 3.33335H6.74992L7.49468 4.79169H16.0609L13.4583 9.16669H7.60825L4.05825 1.66669H1.33325V3.33335H2.99992L5.99992 9.65835L4.87492 11.6917C4.26659 12.8084 5.06659 14.1667 6.33325 14.1667H16.3333V12.5H6.33325L7.24992 10.8334Z" fill="#3F51B5" />
 				</svg>
 				Корзина
+				<span>0</span>
 			</a>
 			<a href="" class="header-mobile__item btn btn_transparrent btn_vertical">
 				<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2386,7 +2403,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240812205226"></script>
+	<script src="js/app.min.js?_v=20240814183301"></script>
 </body>
 
 </html>
