@@ -907,6 +907,7 @@
   padding: rem(8) rem(8) rem(14);
   background-color: cl(bg-light);
   border-radius: rem(24);
+  min-height: 100%;
 
   &:hover {
     .catalog_item-img__item {
@@ -1122,6 +1123,7 @@
     }
   }
   &-content {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
 

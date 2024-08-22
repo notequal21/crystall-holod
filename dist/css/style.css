@@ -2279,6 +2279,7 @@ body::after {
   padding: 0.5rem 0.5rem 0.875rem;
   background-color: var(--color-bg-light);
   border-radius: 1.5rem;
+  min-height: 100%;
 }
 
 .catalog_item:hover .catalog_item-img__item img {
@@ -2504,6 +2505,9 @@ body::after {
 }
 
 .catalog_item-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
