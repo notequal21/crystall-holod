@@ -1259,6 +1259,52 @@
     &__price {
       margin: rem(12) 0 0;
       padding: 0 0 0 rem(4);
+
+      &._discount {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(4) rem(6);
+        ._discount {
+          &-percent {
+            background-color: cl(bg-light);
+          }
+          &-row {
+            display: flex;
+            // width: 100%;
+            // justify-content: center;
+            align-items: center;
+            gap: rem(8) rem(6);
+            @media (max-width: $mobile) {
+              width: auto;
+            }
+          }
+          &-current {
+            // flex: 1 1 100%;
+            // text-align: center;
+            // white-space: nowrap;
+            color: cl(additional-red);
+
+            @media (max-width: $mobile) {
+              flex: 0 0 auto;
+              font-size: rem(14);
+            }
+          }
+          &-old {
+            white-space: nowrap;
+            margin: 0;
+            @media (max-width: $mobile) {
+              font-size: rem(12);
+            }
+          }
+          &-percent {
+            background-color: cl(bg-white);
+            @media (max-width: $mobile) {
+              margin: 0;
+              font-size: rem(12);
+            }
+          }
+        }
+      }
     }
     &__descr {
       margin: rem(16) 0 auto;
