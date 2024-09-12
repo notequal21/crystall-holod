@@ -9374,12 +9374,14 @@
                     item.classList.add("_open");
                 }));
                 category.classList.add("_open");
+                if (window.innerWidth <= 767) document.body.classList.add("lock");
             };
             const closeCategory = () => {
                 openBtn.forEach((item => {
                     item.classList.remove("_open");
                 }));
                 category.classList.remove("_open");
+                if (window.innerWidth <= 767) document.body.classList.remove("lock");
                 closeCategorySecond();
             };
             openBtn.forEach((item => {

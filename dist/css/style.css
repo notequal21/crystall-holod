@@ -586,6 +586,14 @@ body {
       overscroll-behavior: none;
 }
 
+body.lock {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
 body::-webkit-scrollbar {
   height: 0;
   width: 0;
@@ -3624,6 +3632,9 @@ textarea.input._lg {
 }
 
 .header-body__search-dropdown .dropdown-item__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   border: 0.0625rem solid var(--color-additional-divider);
   border-radius: 0.5rem;
   width: 3.75rem;
@@ -3880,6 +3891,27 @@ textarea.input._lg {
 .header .category-second {
   background: rgba(242, 244, 247, 0.5);
   padding: 1.5rem 0;
+  max-height: calc(100vh - 12.5rem);
+  overflow-y: auto;
+}
+
+.header .category-second::-webkit-scrollbar {
+  width: 0.75rem;
+  background-color: trans-prefix;
+}
+
+.header .category-second::-webkit-scrollbar-thumb {
+  border-left: 0.125rem solid var(--color-main-dark-primary);
+}
+
+.header .category-second::-webkit-scrollbar-button:vertical:start:decrement {
+  background-color: transparent;
+  height: 1rem;
+}
+
+.header .category-second::-webkit-scrollbar-button:vertical:end:increment {
+  background-color: transparent;
+  height: 1rem;
 }
 
 .header .category-second._open {
@@ -6885,6 +6917,9 @@ textarea.input._lg {
 }
 
 .lk_orders-card__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9606,6 +9641,32 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 
+@media (min-width: 768px) {
+  .header .category-main {
+    max-height: calc(100vh - 12.5rem);
+    overflow-y: auto;
+  }
+
+  .header .category-main::-webkit-scrollbar {
+    width: 0.75rem;
+    background-color: trans-prefix;
+  }
+
+  .header .category-main::-webkit-scrollbar-thumb {
+    border-left: 0.125rem solid var(--color-main-dark-primary);
+  }
+
+  .header .category-main::-webkit-scrollbar-button:vertical:start:decrement {
+    background-color: transparent;
+    height: 1rem;
+  }
+
+  .header .category-main::-webkit-scrollbar-button:vertical:end:increment {
+    background-color: transparent;
+    height: 1rem;
+  }
+}
+
 @media (max-width: 90em) {
   .catalog_null-body .null_card {
     -webkit-box-flex: 0;
@@ -10683,7 +10744,7 @@ html.with-fancybox body.hide-scrollbar {
     -webkit-box-shadow: none;
             box-shadow: none;
     width: 100%;
-    padding: 1rem 1rem 6.25rem;
+    padding: 1rem 1rem 10.9375rem;
     height: calc(100vh - 4.6875rem);
     overflow-y: auto;
   }

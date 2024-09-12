@@ -72,6 +72,11 @@ body {
     touch-action: none;
     overscroll-behavior: none;
   }
+  &.lock {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
 
   .loaded & {
   }

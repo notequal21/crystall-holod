@@ -248,6 +248,7 @@
             padding: rem(8);
 
             &__img {
+              flex: 0 0 auto;
               border: rem(1) solid cl(additional-divider);
               border-radius: rem(8);
               width: rem(60);
@@ -531,11 +532,37 @@
       flex-direction: column;
       gap: rem(8);
 
+      @media (min-width: 768px) {
+        max-height: calc(100vh - rem(200));
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: rem(12);
+          background-color: trans-prefix;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-left: rem(2) solid cl(main-dark-primary);
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+        }
+
+        &::-webkit-scrollbar-button:vertical:start:decrement {
+          background-color: transparent;
+          height: rem(16);
+        }
+
+        &::-webkit-scrollbar-button:vertical:end:increment {
+          background-color: transparent;
+          height: rem(16);
+        }
+      }
+
       @media (max-width: $mobile) {
         box-shadow: none;
         width: 100%;
 
-        padding: rem(16) rem(16) rem(100);
+        padding: rem(16) rem(16) rem(175);
         height: calc(100vh - rem(75));
         overflow-y: auto;
       }
@@ -544,6 +571,31 @@
     &-second {
       background: rgba(242, 244, 247, 0.5);
       padding: rem(24) 0;
+
+      max-height: calc(100vh - rem(200));
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: rem(12);
+        background-color: trans-prefix;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-left: rem(2) solid cl(main-dark-primary);
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+      }
+
+      &::-webkit-scrollbar-button:vertical:start:decrement {
+        background-color: transparent;
+        height: rem(16);
+      }
+
+      &::-webkit-scrollbar-button:vertical:end:increment {
+        background-color: transparent;
+        height: rem(16);
+      }
 
       &._open {
         padding: rem(24);
