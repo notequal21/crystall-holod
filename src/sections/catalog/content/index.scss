@@ -300,6 +300,23 @@
       &-check {
         padding: rem(13) rem(8);
       }
+      &-btns {
+        position: relative;
+        padding: rem(16) 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: rem(12);
+          right: rem(12);
+          background-color: cl(additional-divider);
+          height: rem(1);
+        }
+      }
     }
 
     &__content {

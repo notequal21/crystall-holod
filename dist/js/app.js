@@ -19358,9 +19358,20 @@
                 }));
             }));
         }
-        const initNotify = (type, duration = 2500) => {
+        const initNotify = (type, text, duration = 2500) => {
             if (document.querySelector(".notification")) {
-                const notify = document.querySelector(`.notification-list .notification-item.${type}`);
+                const notifyList = document.querySelector(`.notification-list`);
+                let notify = document.createElement("div");
+                notify.classList.add("notification-item", "_success", "text", "text_12", "text_secondary");
+                notify.innerHTML = text;
+                switch (type) {
+                  case "_success":
+                    break;
+
+                  default:
+                    break;
+                }
+                notifyList.appendChild(notify);
                 notify.classList.add("_active");
                 setTimeout((() => {
                     notify.classList.add("_visible");
@@ -19376,8 +19387,28 @@
             }
         };
         setTimeout((() => {
-            initNotify("_success");
+            initNotify("_success", "Товар «Название товара в несколько сим...» добавлен к корзину в количестве 1 шт");
+            initNotify("_success", "Товар «Название товара в несколько сим...» добавлен к корзину в количестве 1 шт");
+            initNotify("_success", "Товар «Название товара в несколько сим...» добавлен к корзину в количестве 1 шт");
         }), 1e3);
+        if (document.querySelector("._delivery-top__input")) {
+            const block = document.querySelector("._delivery-top__input");
+            const input = block.querySelector(".input");
+            const dropdown = block.querySelector("._dropdown");
+            const dropdownItem = dropdown.querySelectorAll("li");
+            input.addEventListener("input", (e => {
+                if (e.target.value.length > 2) block.classList.add("_active"); else block.classList.remove("_active");
+            }));
+            dropdownItem.forEach((item => {
+                item.addEventListener("click", (e => {
+                    input.value = e.target.textContent.trim();
+                    block.classList.remove("_active");
+                }));
+            }));
+            block.addEventListener("mouseleave", (() => {
+                block.classList.remove("_active");
+            }));
+        }
         window["FLS"] = true;
         isWebp();
         formFieldsInit({

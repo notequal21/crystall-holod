@@ -337,6 +337,84 @@
             }
             &__select {
             }
+            &__input {
+              position: relative;
+              z-index: 1;
+
+              &._active {
+                .input {
+                  border-radius: rem(12) rem(12) 0 0;
+                }
+                ._dropdown {
+                  opacity: 1;
+                  pointer-events: unset;
+                  user-select: unset;
+                }
+              }
+
+              .input {
+                width: 100%;
+                padding: rem(8) rem(14);
+                font-size: rem(14);
+              }
+
+              ._dropdown {
+                position: absolute;
+                border-radius: 0 0 rem(12) rem(12);
+                max-height: rem(220);
+                overflow-y: auto;
+
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: cl(bg-light);
+
+                padding: rem(8) rem(14);
+
+                opacity: 0;
+                pointer-events: none;
+                user-select: none;
+
+                transition: all $time $tr;
+
+                &::-webkit-scrollbar {
+                  width: rem(12);
+                  background-color: trans-prefix;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                  border-left: rem(2) solid cl(main-dark-primary);
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                }
+
+                &::-webkit-scrollbar-button:vertical:start:decrement {
+                  background-color: transparent;
+                  height: rem(16);
+                }
+
+                &::-webkit-scrollbar-button:vertical:end:increment {
+                  background-color: transparent;
+                  height: rem(16);
+                }
+
+                ul {
+                  display: flex;
+                  flex-direction: column;
+                  gap: rem(8);
+
+                  li {
+                    cursor: pointer;
+                    transition: all $time $tr;
+
+                    &:hover {
+                      color: cl(main-accent);
+                    }
+                  }
+                }
+              }
+            }
           }
           &-content {
             display: flex;

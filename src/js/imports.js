@@ -19,3 +19,5 @@ import '../components/headerSearch/headerSearch.js';
 import '../components/preloader/preloader.js';
 import '../components/policyAccordion/policyAccordion.js';
 import '../components/notification/notification.js';
+
+import '../components/catalogDetailTip/catalogDetailTip.js';
