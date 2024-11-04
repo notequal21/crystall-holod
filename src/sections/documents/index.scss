@@ -1,0 +1,68 @@
+.documents {
+  margin: 0 0 rem(80);
+
+  @media (max-width: $mobile) {
+    margin: 0;
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 rem(12);
+  }
+  &-body {
+    margin: rem(24) 0 0;
+    padding: rem(40);
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    background: #fff;
+    border-radius: rem(24);
+
+    @media (max-width: $laptop) {
+      margin: rem(16) 0 0;
+      padding: rem(24);
+    }
+    @media (max-width: $mobile) {
+      position: relative;
+      padding: rem(24) rem(16) rem(48);
+      margin: rem(24) rem(-16) 0;
+      border-radius: rem(24) rem(24) 0 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: rem(24);
+        background-color: #fff;
+      }
+    }
+  }
+  &-item {
+    display: flex;
+    gap: rem(12);
+    align-items: center;
+    border: rem(1) solid #dcdee5;
+    border-radius: rem(16);
+    padding: rem(12);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__icon {
+      flex: 0 0 auto;
+      width: rem(28);
+      height: rem(28);
+    }
+    &__name {
+      flex: 1 1 100%;
+    }
+    &__btn {
+      padding: rem(8) rem(16);
+      font-size: rem(12);
+    }
+  }
+}

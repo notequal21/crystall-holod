@@ -39,6 +39,31 @@
       top: $stickyTop;
       flex: 0 0 rem(330);
 
+      max-height: calc(100vh - $stickyTop - rem(24));
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: rem(6);
+        background-color: trans-prefix;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-right: rem(2) solid cl(main-dark-primary);
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+      }
+
+      &::-webkit-scrollbar-button:vertical:start:decrement {
+        background-color: transparent;
+        height: rem(16);
+      }
+
+      &::-webkit-scrollbar-button:vertical:end:increment {
+        background-color: transparent;
+        height: rem(16);
+      }
+
       @media (max-width: $laptop) {
         flex: 0 0 rem(270);
       }

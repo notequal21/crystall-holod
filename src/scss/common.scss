@@ -844,12 +844,15 @@
 
   .catalog_item {
     flex: 0 0 calc(25% - rem(9));
+    width: calc(25% - rem(9));
 
     @media (max-width: $laptop) {
       flex: 0 0 calc(33.333% - rem(8));
+      width: calc(33.333% - rem(8));
     }
     @media (max-width: $mobile) {
       flex: 0 0 calc(50% - rem(3.5));
+      width: calc(50% - rem(3.5));
     }
   }
 
@@ -881,6 +884,8 @@
 
         &-top {
           padding: 0 rem(4) 0 0;
+          justify-content: flex-start;
+          gap: rem(12);
 
           .catalog_item-img__status {
             display: flex;
@@ -1106,8 +1111,8 @@
     }
     &__item {
       position: absolute;
-      pointer-events: none;
-      user-select: none;
+      // pointer-events: none;
+      // user-select: none;
       z-index: 0;
       inset: 0;
       overflow: hidden;
@@ -1309,6 +1314,7 @@
     &__descr {
       margin: rem(16) 0 auto;
       padding: 0 0 0 rem(4);
+      word-wrap: break-word;
     }
     &__btn {
       align-self: flex-start;
@@ -1496,6 +1502,8 @@ textarea.input._lg {
   display: flex;
   gap: rem(8);
   align-items: center;
+
+  word-break: break-all;
 
   &:hover {
     ._fake {

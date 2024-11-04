@@ -21,3 +21,4 @@ import '../components/policyAccordion/policyAccordion.js';
 import '../components/notification/notification.js';
 
 import '../components/catalogDetailTip/catalogDetailTip.js';
+import '../components/mobileMenu/mobileMenu.js';
