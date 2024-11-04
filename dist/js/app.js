@@ -15818,6 +15818,18 @@
                 window.onscroll = function() {
                     const currentScrollPos = window.pageYOffset;
                     if (prevScrollpos > currentScrollPos) header.classList.add("_visible"); else header.classList.remove("_visible");
+                    if (document.querySelector(".catalog-body__side")) {
+                        const catalogSide = document.querySelector(".catalog-body__side");
+                        catalogSide.style.top;
+                        console.log(catalogSide.style.top);
+                        if (prevScrollpos > currentScrollPos) {
+                            catalogSide.style.top = `${header.offsetHeight + 16}px`;
+                            catalogSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
+                        } else {
+                            catalogSide.style.top = `16px`;
+                            catalogSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+                        }
+                    }
                     prevScrollpos = currentScrollPos;
                 };
                 window.addEventListener("scroll", handleSticky);

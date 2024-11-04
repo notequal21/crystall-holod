@@ -5054,6 +5054,8 @@ textarea.input._lg {
           flex: 0 0 20.625rem;
   max-height: calc(100vh - 1rem - 1.5rem);
   overflow-y: auto;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .catalog-body__side::-webkit-scrollbar {

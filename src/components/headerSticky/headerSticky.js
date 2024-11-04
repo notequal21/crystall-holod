@@ -26,6 +26,22 @@ if (document.querySelector('.header')) {
       } else {
         header.classList.remove('_visible');
       }
+      if (document.querySelector('.catalog-body__side')) {
+        const catalogSide = document.querySelector('.catalog-body__side');
+        const defaultTop = catalogSide.style.top;
+
+        console.log(catalogSide.style.top);
+
+        if (prevScrollpos > currentScrollPos) {
+          // catalogSide.add('_header-visible');
+          catalogSide.style.top = `${header.offsetHeight + 16}px`;
+          catalogSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
+        } else {
+          catalogSide.style.top = `16px`;
+          catalogSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+          // catalogSide.remove('_header-visible');
+        }
+      }
       prevScrollpos = currentScrollPos;
     };
     window.addEventListener('scroll', handleSticky);
