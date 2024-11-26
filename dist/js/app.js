@@ -9365,6 +9365,7 @@
             const openBtn = document.querySelectorAll(".category-open-btn");
             const closeBtn = document.querySelectorAll(".category-close-btn");
             const category = document.querySelector(".category");
+            const header = document.querySelector(".header");
             const categoryMain = category.querySelector(".category-main");
             const categoryMainItemList = categoryMain.querySelectorAll(".category-item._second");
             const categorySecond = category.querySelector(".category-second");
@@ -9373,7 +9374,13 @@
                 openBtn.forEach((item => {
                     item.classList.add("_open");
                 }));
-                category.classList.add("_open");
+                if (window.innerWidth <= 767) {
+                    header.classList.remove("_scrolled");
+                    category.classList.remove("_hidden");
+                    setTimeout((() => {
+                        category.classList.add("_open");
+                    }), 300);
+                } else category.classList.add("_open");
                 if (window.innerWidth <= 767) document.body.classList.add("lock");
             };
             const closeCategory = () => {
@@ -9381,6 +9388,9 @@
                     item.classList.remove("_open");
                 }));
                 category.classList.remove("_open");
+                if (window.innerWidth <= 767) setTimeout((() => {
+                    category.classList.add("_hidden");
+                }), 300);
                 if (window.innerWidth <= 767) document.body.classList.remove("lock");
                 closeCategorySecond();
             };

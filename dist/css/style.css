@@ -3901,7 +3901,6 @@ textarea.input._lg {
   top: 100%;
   left: 2.5rem;
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -3925,6 +3924,10 @@ textarea.input._lg {
   -webkit-transform: translate(0);
       -ms-transform: translate(0);
           transform: translate(0);
+}
+
+.header .category._hidden {
+  display: none;
 }
 
 .header .category-bg {
@@ -11126,12 +11129,14 @@ html.with-fancybox body.hide-scrollbar {
         -ms-transform: translate(0);
             transform: translate(0);
     opacity: 1;
+    visibility: hidden;
   }
 
   .header .category._open .category-wrapper {
     -webkit-transform: translate(0);
         -ms-transform: translate(0);
             transform: translate(0);
+    visibility: visible;
   }
 
   .header .category._open .category-bg {
@@ -11153,6 +11158,7 @@ html.with-fancybox body.hide-scrollbar {
     -webkit-transform: translate(0, 100%);
         -ms-transform: translate(0, 100%);
             transform: translate(0, 100%);
+    visibility: hidden;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
   }
