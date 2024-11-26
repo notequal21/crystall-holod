@@ -3524,7 +3524,7 @@ textarea.input._lg {
 
 .header {
   position: fixed;
-  z-index: 10;
+  z-index: 9;
   left: 0;
   width: 100%;
   background-color: var(--color-bg-light);
