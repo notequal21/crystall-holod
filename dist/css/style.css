@@ -2190,6 +2190,10 @@ body::after {
   fill: var(--color-main-accent);
 }
 
+.cart_item__btns .btn._favorite._is-favorite svg path {
+  opacity: 1;
+}
+
 ._slider_pagination {
   display: -webkit-box;
   display: -ms-flexbox;

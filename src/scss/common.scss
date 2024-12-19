@@ -704,6 +704,14 @@
             fill: cl(main-accent);
           }
         }
+
+        &._is-favorite {
+          svg {
+            path {
+              opacity: 1;
+            }
+          }
+        }
       }
     }
   }
