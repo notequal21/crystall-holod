@@ -818,6 +818,7 @@
             margin: rem(8) 0 0;
             padding: rem(2);
             border-radius: rem(10);
+            gap: rem(15);
 
             button {
               border-radius: rem(8);
@@ -825,6 +826,7 @@
               height: rem(28);
             }
             input {
+              width: calc(100% + rem(40));
               font-size: rem(16);
             }
           }

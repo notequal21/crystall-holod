@@ -52,7 +52,11 @@ export function initSliders() {
 window.addEventListener('load', function (e) {
   const catalogItemSliderMin = new Swiper('.detail-main__slider-thumb', {
     modules: [Pagination, Thumbs, Mousewheel],
-    slidesPerView: 4,
+    slidesPerView: document
+      .querySelector('.detail-main__slider-thumb')
+      ?.classList.contains('_3d')
+      ? 3
+      : 4,
     watchSlidesProgress: true,
     spaceBetween: 19,
     direction: 'horizontal',
@@ -141,20 +145,6 @@ window.addEventListener('load', function (e) {
     navigation: {
       prevEl: '._slider__nav._prev',
       nextEl: '._slider__nav._next',
-    },
-  });
-  createSlider('.fast_view-body__slider', {
-    modules: [Pagination, Navigation],
-    slidesPerView: 1,
-    spaceBetween: 0,
-    autoHeight: true,
-    pagination: {
-      el: '._slider_pagination',
-      clickable: true,
-    },
-    navigation: {
-      prevEl: '._slider_nav._prev',
-      nextEl: '._slider_nav._next',
     },
   });
   createSlider('.fast_view-body__slider', {
