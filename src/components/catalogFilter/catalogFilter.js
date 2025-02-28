@@ -8,7 +8,8 @@ if (document.querySelector('.catalog-body__side')) {
   const openCategory = () => {
     category.classList.add('_open');
     body.classList.add('lock');
-    header.classList.add('_scrolled', '_visible');
+    header.classList.add('_scrolled');
+    header.classList.remove('_visible');
   };
   const closeCategory = () => {
     category.classList.remove('_open');

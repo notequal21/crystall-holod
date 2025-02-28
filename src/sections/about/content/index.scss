@@ -159,12 +159,14 @@
       gap: rem(12);
       flex: 0 0 rem(330);
 
+      transition: all $time $tr;
+
       @media (max-width: $laptop) {
         flex: 0 0 rem(220);
       }
       @media (max-width: $tablet) {
         position: relative;
-        top: auto;
+        top: auto !important;
         flex: 1 1 auto;
         width: 100%;
       }
@@ -735,6 +737,26 @@
           z-index: 1;
           right: rem(16);
           bottom: rem(16);
+        }
+
+        .swiper-slide {
+          width: 100%;
+
+          &:not(:first-child) {
+            img {
+              display: none;
+            }
+          }
+        }
+
+        &.swiper-initialized {
+          .swiper-slide {
+            &:not(:first-child) {
+              img {
+                display: block;
+              }
+            }
+          }
         }
 
         img {

@@ -23,11 +23,13 @@
     border: rem(1) solid cl(additional-divider);
     border-radius: rem(16);
 
+    transition: all $time $tr;
+
     @media (max-width: $tablet) {
       flex: 0 0 auto;
       width: 100%;
       position: relative;
-      top: auto;
+      top: auto !important;
     }
     @media (max-width: $mobile) {
       padding: rem(16);

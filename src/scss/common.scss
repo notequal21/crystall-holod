@@ -705,6 +705,16 @@
           }
         }
 
+        &:hover {
+          svg {
+            path {
+              &:nth-child(1) {
+                opacity: 0.3;
+              }
+            }
+          }
+        }
+
         &._is-favorite {
           svg {
             path {

@@ -276,6 +276,27 @@ body::after {
 
             path {
               fill: cl(main-accent);
+              transition: all $time $tr;
+            }
+          }
+
+          &:hover {
+            svg {
+              path {
+                &:nth-child(1) {
+                  opacity: 0.3;
+                }
+              }
+            }
+          }
+
+          &._in-cart {
+            svg {
+              path {
+                &:nth-child(1) {
+                  opacity: 1;
+                }
+              }
             }
           }
         }

@@ -48,6 +48,14 @@
           height: auto;
         }
 
+        .swiper-wrapper {
+          .swiper-slide {
+            &._3d {
+              display: none;
+            }
+          }
+        }
+
         .swiper-slide {
           cursor: pointer;
           height: rem(92);
@@ -251,7 +259,7 @@
           svg {
             path {
               fill: cl(text-white);
-              &:nth-child(2) {
+              &:nth-child(1) {
                 opacity: 1;
               }
             }
@@ -266,7 +274,7 @@
             fill: cl(main-accent);
             transition: all $time $tr;
 
-            &:nth-child(2) {
+            &:nth-child(1) {
               opacity: 0;
             }
           }

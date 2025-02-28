@@ -42,6 +42,34 @@ if (document.querySelector('.header')) {
           // catalogSide.remove('_header-visible');
         }
       }
+      if (document.querySelector('.cart-summary')) {
+        const cartSummary = document.querySelector('.cart-summary');
+        const defaultTop = cartSummary.style.top;
+
+        if (prevScrollpos > currentScrollPos) {
+          // catalogSide.add('_header-visible');
+          cartSummary.style.top = `${header.offsetHeight + 16}px`;
+          cartSummary.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
+        } else {
+          cartSummary.style.top = `16px`;
+          cartSummary.style.maxHeight = `calc(100vh - 16px - 24px)`;
+          // catalogSide.remove('_header-visible');
+        }
+      }
+      if (document.querySelector('.info-body__side')) {
+        const infoSide = document.querySelector('.info-body__side');
+        const defaultTop = infoSide.style.top;
+
+        if (prevScrollpos > currentScrollPos) {
+          // catalogSide.add('_header-visible');
+          infoSide.style.top = `${header.offsetHeight + 16}px`;
+          infoSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
+        } else {
+          infoSide.style.top = `16px`;
+          infoSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+          // catalogSide.remove('_header-visible');
+        }
+      }
       prevScrollpos = currentScrollPos;
     };
     window.addEventListener('scroll', handleSticky);

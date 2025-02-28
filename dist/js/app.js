@@ -8875,38 +8875,44 @@
             }));
         }
         window.addEventListener("load", (function(e) {
-            const catalogItemSliderMin = new Swiper(".detail-main__slider-thumb", {
-                modules: [ Pagination, Thumb, Mousewheel ],
-                slidesPerView: document.querySelector(".detail-main__slider-thumb")?.classList.contains("_3d") ? 3 : 4,
-                watchSlidesProgress: true,
-                spaceBetween: 19,
-                direction: "horizontal",
-                mousewheel: true,
-                breakpoints: {
-                    767: {
-                        spaceBetween: 24
-                    },
-                    1441: {
-                        spaceBetween: 24,
-                        direction: "vertical"
+            if (document.querySelector(".detail-main__slider-thumb")) {
+                const button3d = document.querySelector(".js-3d-button");
+                const catalogItemSliderMin = new Swiper(".detail-main__slider-thumb", {
+                    modules: [ Pagination, Thumb, Mousewheel ],
+                    slidesPerView: document.querySelector(".detail-main__slider-thumb")?.classList.contains("_3d") ? 3 : 4,
+                    watchSlidesProgress: true,
+                    spaceBetween: 19,
+                    direction: "horizontal",
+                    mousewheel: true,
+                    breakpoints: {
+                        767: {
+                            spaceBetween: 24
+                        },
+                        1441: {
+                            spaceBetween: 24,
+                            direction: "vertical"
+                        }
                     }
-                }
-            });
-            new Swiper(".detail-main__slider-big", {
-                modules: [ Pagination, Thumb, Navigation ],
-                slidesPerView: 1,
-                thumbs: {
-                    swiper: catalogItemSliderMin
-                },
-                pagination: {
-                    el: "._slider_pagination",
-                    clickable: true
-                },
-                navigation: {
-                    prevEl: "._slider_nav._prev",
-                    nextEl: "._slider_nav._next"
-                }
-            });
+                });
+                const catalogItemSliderMain = new Swiper(".detail-main__slider-big", {
+                    modules: [ Pagination, Thumb, Navigation ],
+                    slidesPerView: 1,
+                    thumbs: {
+                        swiper: catalogItemSliderMin
+                    },
+                    pagination: {
+                        el: "._slider_pagination",
+                        clickable: true
+                    },
+                    navigation: {
+                        prevEl: "._slider_nav._prev",
+                        nextEl: "._slider_nav._next"
+                    }
+                });
+                button3d?.addEventListener("click", (() => {
+                    catalogItemSliderMain.slideTo(button3d.dataset.slideIndex);
+                }));
+            }
             createSlider("._slider", {
                 modules: [ Pagination, Navigation ],
                 slidesPerView: 1,
@@ -10937,7 +10943,8 @@
             const openCategory = () => {
                 category.classList.add("_open");
                 body.classList.add("lock");
-                header.classList.add("_scrolled", "_visible");
+                header.classList.add("_scrolled");
+                header.classList.remove("_visible");
             };
             const closeCategory = () => {
                 category.classList.remove("_open");
@@ -15830,6 +15837,28 @@
                         } else {
                             catalogSide.style.top = `16px`;
                             catalogSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+                        }
+                    }
+                    if (document.querySelector(".cart-summary")) {
+                        const cartSummary = document.querySelector(".cart-summary");
+                        cartSummary.style.top;
+                        if (prevScrollpos > currentScrollPos) {
+                            cartSummary.style.top = `${header.offsetHeight + 16}px`;
+                            cartSummary.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
+                        } else {
+                            cartSummary.style.top = `16px`;
+                            cartSummary.style.maxHeight = `calc(100vh - 16px - 24px)`;
+                        }
+                    }
+                    if (document.querySelector(".info-body__side")) {
+                        const infoSide = document.querySelector(".info-body__side");
+                        infoSide.style.top;
+                        if (prevScrollpos > currentScrollPos) {
+                            infoSide.style.top = `${header.offsetHeight + 16}px`;
+                            infoSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
+                        } else {
+                            infoSide.style.top = `16px`;
+                            infoSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
                         }
                     }
                     prevScrollpos = currentScrollPos;
