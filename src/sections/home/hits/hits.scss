@@ -44,7 +44,14 @@
       margin: rem(20) 0 0;
     }
 
+    &.swiper-initialized {
+      .swiper-slide {
+        flex: 0 0 auto;
+      }
+    }
+
     .swiper-slide {
+      flex: 0 0 calc(20%);
       @media (max-width: $tablet) {
         width: rem(250) !important;
       }

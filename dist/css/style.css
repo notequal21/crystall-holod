@@ -4742,6 +4742,18 @@ textarea.input._lg {
   margin: 1rem 0 0;
 }
 
+.hits-slider.swiper-initialized .swiper-slide {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.hits-slider .swiper-slide {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+}
+
 .hits-bottom {
   position: relative;
   margin: 1.25rem 0 0;
