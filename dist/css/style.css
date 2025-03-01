@@ -6783,11 +6783,11 @@ textarea.input._lg {
   width: 100%;
 }
 
-.info-body__content ._slider .swiper-slide:not(:first-child) img {
+.info-body__content ._slider .swiper-slide:not(:first-child) {
   display: none;
 }
 
-.info-body__content ._slider.swiper-initialized .swiper-slide:not(:first-child) img {
+.info-body__content ._slider.swiper-initialized .swiper-slide:not(:first-child) {
   display: block;
 }
 

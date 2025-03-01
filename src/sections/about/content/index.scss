@@ -743,18 +743,14 @@
           width: 100%;
 
           &:not(:first-child) {
-            img {
-              display: none;
-            }
+            display: none;
           }
         }
 
         &.swiper-initialized {
           .swiper-slide {
             &:not(:first-child) {
-              img {
-                display: block;
-              }
+              display: block;
             }
           }
         }
