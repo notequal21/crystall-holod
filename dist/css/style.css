@@ -10361,6 +10361,14 @@ html.with-fancybox body.hide-scrollbar {
     --pad: 16px;
   }
 
+  .cart_item__btns .btn._favorite:hover svg path:nth-child(1) {
+    opacity: 0;
+  }
+
+  .cart_item__btns .btn._favorite._is-favorite svg path {
+    opacity: 1 !important;
+  }
+
   ._slider_pagination {
     right: 0.625rem;
     bottom: 0.625rem;

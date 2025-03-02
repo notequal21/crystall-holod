@@ -9,6 +9,7 @@ import {
   Pagination,
   Thumbs,
   Mousewheel,
+  Autoplay,
 } from 'swiper/modules';
 /*
 Navigation, Pagination, Autoplay, 
@@ -224,9 +225,13 @@ window.addEventListener('load', function (e) {
     },
   });
   createSlider('.brands-slider', {
-    modules: [Navigation],
+    modules: [Navigation, Autoplay],
     slidesPerView: 'auto',
     spaceBetween: 16,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
     navigation: {
       prevEl: '.brands-slider__nav._prev',
       nextEl: '.brands-slider__nav._next',

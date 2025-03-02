@@ -710,6 +710,9 @@
             path {
               &:nth-child(1) {
                 opacity: 0.3;
+                @media (max-width: $tablet) {
+                  opacity: 0;
+                }
               }
             }
           }
@@ -719,6 +722,10 @@
           svg {
             path {
               opacity: 1;
+
+              @media (max-width: $tablet) {
+                opacity: 1 !important;
+              }
             }
           }
         }
