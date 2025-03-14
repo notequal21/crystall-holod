@@ -15,6 +15,7 @@ if (document.querySelector('.header')) {
   window.addEventListener('load', () => {
     setTimeout(() => {
       page.style.padding = `${header.offsetHeight}px  0 0`;
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }, 200);
   });
 
