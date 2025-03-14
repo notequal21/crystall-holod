@@ -7,7 +7,7 @@
   transition: all $time $tr;
 
   &._scrolled {
-    transform: translate(0, -100%);
+    // transform: translate(0, -100%);
     .header-top {
       height: 0;
       border: none;
@@ -131,8 +131,11 @@
 
     &__logo {
       flex: 0 0 auto;
-      width: rem(192);
+      width: rem(300);
 
+      @media (max-width: $laptop) {
+        width: rem(200);
+      }
       @media (max-width: $tablet) {
         width: rem(140);
       }
