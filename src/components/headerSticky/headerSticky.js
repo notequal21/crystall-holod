@@ -16,7 +16,10 @@ if (document.querySelector('.header')) {
     setTimeout(() => {
       page.style.padding = `${header.offsetHeight}px  0 0`;
       window.scrollTo({ top: 0, behavior: 'instant' });
-    }, 200);
+    }, 0);
+    setTimeout(() => {
+      header.classList.add('_loaded');
+    }, 350);
   });
 
   setTimeout(() => {
@@ -38,8 +41,12 @@ if (document.querySelector('.header')) {
           catalogSide.style.top = `${header.offsetHeight + 16}px`;
           catalogSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
         } else {
-          catalogSide.style.top = `16px`;
-          catalogSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+          catalogSide.style.top = `${header.offsetHeight + 16}px`;
+          catalogSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
+
+          // catalogSide.style.top = `16px`;
+          // catalogSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+
           // catalogSide.remove('_header-visible');
         }
       }
@@ -52,8 +59,10 @@ if (document.querySelector('.header')) {
           cartSummary.style.top = `${header.offsetHeight + 16}px`;
           cartSummary.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
         } else {
-          cartSummary.style.top = `16px`;
-          cartSummary.style.maxHeight = `calc(100vh - 16px - 24px)`;
+          cartSummary.style.top = `${header.offsetHeight + 16}px`;
+          cartSummary.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
+          // cartSummary.style.top = `16px`;
+          // cartSummary.style.maxHeight = `calc(100vh - 16px - 24px)`;
           // catalogSide.remove('_header-visible');
         }
       }
@@ -61,13 +70,18 @@ if (document.querySelector('.header')) {
         const infoSide = document.querySelector('.info-body__side');
         const defaultTop = infoSide.style.top;
 
+        console.log(header.offsetHeight);
+
         if (prevScrollpos > currentScrollPos) {
           // catalogSide.add('_header-visible');
           infoSide.style.top = `${header.offsetHeight + 16}px`;
           infoSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
         } else {
-          infoSide.style.top = `16px`;
-          infoSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+          infoSide.style.top = `${header.offsetHeight + 16}px`;
+          infoSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
+          // infoSide.style.top = `16px`;
+          // infoSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+
           // catalogSide.remove('_header-visible');
         }
       }

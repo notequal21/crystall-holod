@@ -16079,7 +16079,10 @@
                         top: 0,
                         behavior: "instant"
                     });
-                }), 200);
+                }), 0);
+                setTimeout((() => {
+                    header.classList.add("_loaded");
+                }), 350);
             }));
             setTimeout((() => {
                 window.onscroll = function() {
@@ -16093,8 +16096,8 @@
                             catalogSide.style.top = `${header.offsetHeight + 16}px`;
                             catalogSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
                         } else {
-                            catalogSide.style.top = `16px`;
-                            catalogSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+                            catalogSide.style.top = `${header.offsetHeight + 16}px`;
+                            catalogSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
                         }
                     }
                     if (document.querySelector(".cart-summary")) {
@@ -16104,19 +16107,20 @@
                             cartSummary.style.top = `${header.offsetHeight + 16}px`;
                             cartSummary.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
                         } else {
-                            cartSummary.style.top = `16px`;
-                            cartSummary.style.maxHeight = `calc(100vh - 16px - 24px)`;
+                            cartSummary.style.top = `${header.offsetHeight + 16}px`;
+                            cartSummary.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
                         }
                     }
                     if (document.querySelector(".info-body__side")) {
                         const infoSide = document.querySelector(".info-body__side");
                         infoSide.style.top;
+                        console.log(header.offsetHeight);
                         if (prevScrollpos > currentScrollPos) {
                             infoSide.style.top = `${header.offsetHeight + 16}px`;
                             infoSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
                         } else {
-                            infoSide.style.top = `16px`;
-                            infoSide.style.maxHeight = `calc(100vh - 16px - 24px)`;
+                            infoSide.style.top = `${header.offsetHeight + 16}px`;
+                            infoSide.style.maxHeight = `calc(100vh - 16px - 24px - ${header.offsetHeight}px)`;
                         }
                     }
                     prevScrollpos = currentScrollPos;

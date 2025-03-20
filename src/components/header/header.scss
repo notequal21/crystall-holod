@@ -6,7 +6,21 @@
   background-color: cl(bg-light);
   transition: all $time $tr;
 
+  transition: none !important;
+  * {
+    transition: none !important;
+  }
+
+  &._loaded {
+    transition: all $time $tr !important;
+    * {
+      transition: all $time $tr !important;
+    }
+  }
+
   &._scrolled {
+    transform: translate(0);
+    box-shadow: 0 0 rem(16) 0 rgba(48, 63, 159, 0.3);
     // transform: translate(0, -100%);
     .header-top {
       height: 0;

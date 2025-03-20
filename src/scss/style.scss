@@ -116,6 +116,7 @@ body {
 }
 .page {
   padding: rem(181) 0 0;
+  transition: none !important;
 
   @media (max-width: $mobile) {
     padding: rem(200) 0 0;

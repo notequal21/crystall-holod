@@ -648,6 +648,8 @@ body::-webkit-scrollbar-thumb {
 
 .page {
   padding: 11.3125rem 0 0;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 [class*=__container] {
@@ -3563,6 +3565,31 @@ textarea.input._lg {
   background-color: var(--color-bg-light);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.header * {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.header._loaded {
+  -webkit-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.header._loaded * {
+  -webkit-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.header._scrolled {
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+  -webkit-box-shadow: 0 0 1rem 0 rgba(48, 63, 159, 0.3);
+          box-shadow: 0 0 1rem 0 rgba(48, 63, 159, 0.3);
 }
 
 .header._scrolled .header-top {
