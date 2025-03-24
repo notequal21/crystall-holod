@@ -14,11 +14,12 @@ if (document.querySelector('.header')) {
 
   window.addEventListener('load', () => {
     setTimeout(() => {
-      page.style.padding = `${header.offsetHeight}px  0 0`;
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      // page.style.padding = `${header.offsetHeight}px  0 0`;
+      // window.scrollTo({ top: 0, behavior: 'instant' });
     }, 0);
     setTimeout(() => {
       header.classList.add('_loaded');
+      page.style.padding = `${header.offsetHeight}px  0 0`;
     }, 350);
   });
 

@@ -647,7 +647,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .page {
-  padding: 11.3125rem 0 0;
   -webkit-transition: none !important;
   transition: none !important;
 }
@@ -3558,7 +3557,7 @@ textarea.input._lg {
 /* =====  End of Choices  ====== */
 
 .header {
-  position: fixed;
+  position: relative;
   z-index: 9;
   left: 0;
   width: 100%;
@@ -3575,6 +3574,7 @@ textarea.input._lg {
 }
 
 .header._loaded {
+  position: fixed;
   -webkit-transition: all 0.3s ease-out !important;
   transition: all 0.3s ease-out !important;
 }
@@ -10909,10 +10909,6 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 @media (max-width: 47.99875em) {
-  .page {
-    padding: 12.5rem 0 0;
-  }
-
   .popup {
     padding: 4.375rem 0 0;
   }

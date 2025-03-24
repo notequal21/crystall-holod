@@ -1,5 +1,6 @@
 .header {
-  position: fixed;
+  position: relative;
+  // position: fixed;
   z-index: 9;
   left: 0;
   width: 100%;
@@ -12,6 +13,7 @@
   }
 
   &._loaded {
+    position: fixed;
     transition: all $time $tr !important;
     * {
       transition: all $time $tr !important;

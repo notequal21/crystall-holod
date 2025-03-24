@@ -16073,15 +16073,10 @@
                 if (window.pageYOffset > sticky) header.classList.add("_scrolled"); else header.classList.remove("_scrolled");
             }
             window.addEventListener("load", (() => {
-                setTimeout((() => {
-                    page.style.padding = `${header.offsetHeight}px  0 0`;
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "instant"
-                    });
-                }), 0);
+                setTimeout((() => {}), 0);
                 setTimeout((() => {
                     header.classList.add("_loaded");
+                    page.style.padding = `${header.offsetHeight}px  0 0`;
                 }), 350);
             }));
             setTimeout((() => {
