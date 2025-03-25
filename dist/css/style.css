@@ -660,6 +660,10 @@ body::-webkit-scrollbar-thumb {
   margin: 0 auto;
 }
 
+.fancybox__container {
+  max-width: 100%;
+}
+
 body::after {
   content: "";
   background-color: rgba(0, 0, 0, 0.5);
