@@ -47,7 +47,9 @@
     }
 
     &.choices__list--dropdown {
-      // width: auto;
+      .choices__list {
+        overflow-y: auto !important;
+      }
 
       .choices__item {
         padding: rem(6) rem(14) rem(6) rem(14) !important;

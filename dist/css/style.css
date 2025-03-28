@@ -7910,6 +7910,10 @@ textarea.input._lg {
   background: transparent;
 }
 
+.choices__list.choices__list--dropdown .choices__list {
+  overflow-y: auto !important;
+}
+
 .choices__list.choices__list--dropdown .choices__item {
   padding: 0.375rem 0.875rem 0.375rem 0.875rem !important;
   font-weight: 500;
