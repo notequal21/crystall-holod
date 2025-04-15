@@ -11559,6 +11559,10 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 0.75rem;
   }
 
+  .page_top-title {
+    display: block;
+  }
+
   .page_top-title .btn {
     display: none;
   }
