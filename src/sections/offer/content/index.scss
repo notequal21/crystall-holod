@@ -87,6 +87,9 @@
     margin: rem(16) 0 0;
     padding: rem(16) 0 0;
     border-top: rem(1) solid cl(additional-divider);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(8);
 
     &-item {
       display: flex;
@@ -102,6 +105,13 @@
         object-fit: contain;
         margin: 0 0 0 auto;
       }
+    }
+  }
+
+  ._comment {
+    textarea::placeholder {
+      color: var(--color-text-primary);
+      opacity: .3;
     }
   }
 }

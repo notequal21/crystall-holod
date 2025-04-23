@@ -879,6 +879,7 @@
       flex: 0 0 calc(50% - rem(3.5));
       width: calc(50% - rem(3.5));
     }
+
   }
 
   &._horizontal {
@@ -1336,15 +1337,47 @@
         }
       }
     }
+
+
     &__descr {
       margin: rem(16) 0 auto;
       padding: 0 0 0 rem(4);
       word-wrap: break-word;
     }
+
+    &__ui {
+      margin: rem(16) 0 0 0;
+      display: flex;
+      gap: rem(16);
+    }
+
+
+    &__counter {
+      max-width: 166px;
+    }
+
+
     &__btn {
       align-self: flex-start;
-      margin: rem(16) 0 0 rem(4);
-      padding: rem(12) rem(32);
+      padding: rem(12) rem(12);
+    }
+
+    @media (max-width: 47.9988em){
+      &__counter {
+        padding: rem(2);
+        button {
+          width: rem(28);
+          height: rem(28);
+        }
+
+        input {
+          font-size: rem(16);
+        }
+      }
+
+      &__btn {
+        padding: rem(8);
+      }
     }
   }
 }
@@ -1519,6 +1552,12 @@ textarea.input {
 textarea.input._lg {
   resize: none;
   height: rem(168);
+}
+
+textarea.input._sm {
+  padding: rem(8) rem(12);
+  font-size: rem(14);
+  height: rem(83);
 }
 
 .checkbox {

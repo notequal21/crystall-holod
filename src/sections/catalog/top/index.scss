@@ -70,4 +70,59 @@
       }
     }
   }
+
+  &-category-seals {
+    margin: rem(32) 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(16) rem(24);
+
+    @media (max-width:$mobile){
+      gap: rem(20) rem(10);
+    
+    }
+
+    &__item {
+      background-color: #fff;
+      flex: 0 0 calc(20% - rem(66.5));
+      border-radius: rem(14);
+      padding: rem(16);
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(16);
+      align-items: center;
+      border: rem(1) solid cl(bg-white);
+
+      transition: all $time $tr;
+
+      @media (max-width: $laptop){
+        flex: 0 1 calc(25% - rem(18));
+      }
+
+      @media (max-width: $tablet) {
+        flex: 0 1 calc(33.333% - rem(18));
+      }
+      @media (max-width: $mobile) {
+        flex: 0 1 calc(50% - rem(5));
+        padding: rem(12);
+      }
+      &:hover {
+        border-color: cl(additional-divider);
+        color: cl(main-primary);
+      }
+    }
+
+    &__item-img {
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &__item-text {
+      font-weight: 500;
+      color: var(--text-secondary)
+    }
+  }
 }

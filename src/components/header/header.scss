@@ -324,11 +324,15 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          width: rem(16);
-          height: rem(16);
+          min-width: rem(16);
+          min-height: rem(16);
           background-color: cl(additional-red);
           border: rem(1) solid #fff;
-          border-radius: 50%;
+          border-radius: rem(20);
+          padding-left: rem(2);
+          padding-right: rem(2);
+          padding-top: rem(1);
+          padding-bottom: rem(1);
 
           font-weight: 500;
           font-size: rem(10);
@@ -404,11 +408,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: rem(14);
+        width: max-content;
         height: rem(14);
         background-color: cl(additional-red);
         border: rem(1) solid #fff;
-        border-radius: 50%;
+        border-radius: rem(20);
+        padding-left: rem(2);
+        padding-right: rem(2);
+        padding-top: rem(1);
+        padding-bottom: rem(1);
 
         font-weight: 500;
         font-size: rem(8);
