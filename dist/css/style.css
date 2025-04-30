@@ -2898,6 +2898,14 @@ body::after {
   padding: 0.75rem 0.75rem;
 }
 
+.catalog_item-content__btn_active {
+  background-color: var(--color-additional-green);
+}
+
+.catalog_item-content__btn_active:hover {
+  background-color: var(--color-additional-green);
+}
+
 ._label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9988,7 +9996,7 @@ html.with-fancybox body.hide-scrollbar {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  max-width: 19.375rem;
+  max-width: 26.25rem;
 }
 
 .notification-item {
@@ -10094,7 +10102,7 @@ html.with-fancybox body.hide-scrollbar {
 
 .notification-item__content-text {
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--color-whte);
 }
 

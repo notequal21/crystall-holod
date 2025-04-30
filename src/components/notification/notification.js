@@ -22,7 +22,7 @@ export const initNotify = (type, text, duration = 2500) => {
       'notification-item',
       '_success',
       'text',
-      'text_12',
+      'text_16',
       'text_secondary'
     );
     notify.innerHTML = text;

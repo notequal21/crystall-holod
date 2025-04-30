@@ -12,6 +12,8 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
+import {initNotify} from "../components/notification/notification.js";
+
 window["FLS"] = true;
 
 // Подключение основного файла стилей

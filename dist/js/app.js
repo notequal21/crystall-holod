@@ -4449,6 +4449,39 @@
     }
     (() => {
         "use strict";
+        const initNotify = (type, text, duration = 2500) => {
+            if (document.querySelector(".notification")) {
+                const notifyList = document.querySelector(`.notification-list`);
+                let notify = document.createElement("div");
+                notify.classList.add("notification-item", "_success", "text", "text_16", "text_secondary");
+                notify.innerHTML = text;
+                switch (type) {
+                  case "_success":
+                    break;
+
+                  default:
+                    break;
+                }
+                notifyList.appendChild(notify);
+                notify.classList.add("_active");
+                setTimeout((() => {
+                    notify.classList.add("_visible");
+                }), 1);
+                setTimeout((() => {
+                    notify.classList.add("_clear");
+                }), duration);
+                setTimeout((() => {
+                    notify.classList.remove("_clear");
+                    notify.classList.remove("_visible");
+                    notify.classList.remove("_active");
+                }), duration + 300);
+            }
+        };
+        setTimeout((() => {
+            initNotify("_success", "Товар «Название товара в несколько сим...» добавлен к корзину в количестве 1 шт");
+            initNotify("_success", "Товар «Название товара в несколько сим...» добавлен к корзину в количестве 1 шт");
+            initNotify("_success", "Товар «Название товара в несколько сим...» добавлен к корзину в количестве 1 шт");
+        }), 1e3);
         const flsModules = {};
         function isWebp() {
             function testWebP(callback) {
@@ -11225,6 +11258,7 @@
                     if (item.dataset.cardType === "row") catalogContent.classList.add("_horizontal"); else catalogContent.classList.remove("_horizontal");
                 }));
             }));
+            initNotify("_success", "TEST");
         }
         if (document.querySelector(".lk_orders-item")) {
             const itemList = document.querySelectorAll(".lk_orders-item");
@@ -19658,39 +19692,6 @@
                 }));
             }));
         }
-        const initNotify = (type, text, duration = 2500) => {
-            if (document.querySelector(".notification")) {
-                const notifyList = document.querySelector(`.notification-list`);
-                let notify = document.createElement("div");
-                notify.classList.add("notification-item", "_success", "text", "text_12", "text_secondary");
-                notify.innerHTML = text;
-                switch (type) {
-                  case "_success":
-                    break;
-
-                  default:
-                    break;
-                }
-                notifyList.appendChild(notify);
-                notify.classList.add("_active");
-                setTimeout((() => {
-                    notify.classList.add("_visible");
-                }), 1);
-                setTimeout((() => {
-                    notify.classList.add("_clear");
-                }), duration);
-                setTimeout((() => {
-                    notify.classList.remove("_clear");
-                    notify.classList.remove("_visible");
-                    notify.classList.remove("_active");
-                }), duration + 300);
-            }
-        };
-        setTimeout((() => {
-            initNotify("_success", "Товар «Название товара в несколько сим...» добавлен к корзину в количестве 1 шт");
-            initNotify("_success", "Товар «Название товара в несколько сим...» добавлен к корзину в количестве 1 шт");
-            initNotify("_success", "Товар «Название товара в несколько сим...» добавлен к корзину в количестве 1 шт");
-        }), 1e3);
         if (document.querySelector("._delivery-top__input")) {
             const block = document.querySelector("._delivery-top__input");
             const input = block.querySelector(".input");
@@ -19723,6 +19724,14 @@
                 item.addEventListener("click", (() => {
                     menu.classList.remove("open");
                     document.body.classList.remove("lock");
+                }));
+            }));
+        }
+        if (document.querySelector("._counter")) {
+            const counterInput = document.querySelectorAll("._counter input");
+            counterInput.forEach((input => {
+                input.addEventListener("focus", (e => {
+                    input.value = "";
                 }));
             }));
         }

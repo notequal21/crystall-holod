@@ -1,3 +1,5 @@
+import {initNotify} from "../notification/notification.js";
+
 if (document.querySelector('._catalog_card')) {
   const catalog = document.querySelector('._catalog_card');
   const catalogCardType = catalog.querySelectorAll('._type input');
@@ -12,4 +14,6 @@ if (document.querySelector('._catalog_card')) {
       }
     });
   });
+
+  initNotify('_success', 'TEST');
 }

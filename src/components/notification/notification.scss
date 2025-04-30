@@ -30,7 +30,7 @@
     gap: rem(8);
     flex-direction: column;
     width: 100%;
-    max-width: rem(310);
+    max-width: rem(420);
   }
   &-item {
     width: 100%;
@@ -107,7 +107,7 @@
       }
       &-text {
         font-weight: 400;
-        font-size: rem(12);
+        font-size: rem(16);
         color: cl(whte);
       }
     }
